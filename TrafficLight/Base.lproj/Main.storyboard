@@ -1,24 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29r-nC-Xyz">
+                                <rect key="frame" x="146.66666666666666" y="99" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="fJy-fT-QbS"/>
+                                    <constraint firstAttribute="width" secondItem="29r-nC-Xyz" secondAttribute="height" multiplier="1:1" id="lOi-BH-Byo"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hft-xI-5bR">
+                                <rect key="frame" x="146.66666666666666" y="249" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="nDV-eA-fEy"/>
+                                    <constraint firstAttribute="width" secondItem="hft-xI-5bR" secondAttribute="height" multiplier="1:1" id="tpH-K2-LEY"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26u-id-9TP">
+                                <rect key="frame" x="146.66666666666666" y="399" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="MFs-pD-B9u"/>
+                                    <constraint firstAttribute="width" secondItem="26u-id-9TP" secondAttribute="height" multiplier="1:1" id="SSp-bx-2Of"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhI-L7-gtD">
+                                <rect key="frame" x="121.66666666666669" y="683" width="150" height="35"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="hD9-i0-HlG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="lightSwitchButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="QtJ-nh-V0t"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="26u-id-9TP" firstAttribute="top" secondItem="hft-xI-5bR" secondAttribute="bottom" constant="50" id="Kvx-Vl-ocy"/>
+                            <constraint firstItem="hft-xI-5bR" firstAttribute="top" secondItem="29r-nC-Xyz" secondAttribute="bottom" constant="50" id="Nhk-3X-K63"/>
+                            <constraint firstItem="hft-xI-5bR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="U7b-dJ-dNS"/>
+                            <constraint firstItem="26u-id-9TP" firstAttribute="width" secondItem="26u-id-9TP" secondAttribute="height" multiplier="1:1" id="Xub-V6-M1c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bhI-L7-gtD" secondAttribute="bottom" constant="100" id="ZLk-DH-xUg"/>
+                            <constraint firstItem="29r-nC-Xyz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aUz-8F-pis"/>
+                            <constraint firstItem="bhI-L7-gtD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fHV-eE-ioX"/>
+                            <constraint firstItem="26u-id-9TP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fWa-r1-B4t"/>
+                            <constraint firstItem="hft-xI-5bR" firstAttribute="width" secondItem="hft-xI-5bR" secondAttribute="height" multiplier="1:1" id="ot0-7C-oL9"/>
+                            <constraint firstItem="29r-nC-Xyz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="plN-8s-ffv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLight" destination="26u-id-9TP" id="vWv-xW-uJd"/>
+                        <outlet property="redLight" destination="29r-nC-Xyz" id="xRX-N0-fd6"/>
+                        <outlet property="switchButton" destination="bhI-L7-gtD" id="FUS-vh-mue"/>
+                        <outlet property="yellowLight" destination="hft-xI-5bR" id="jxc-HF-tG2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="269" y="26"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
